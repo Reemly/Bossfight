@@ -22,7 +22,7 @@ System.Console.WriteLine(art);
 
 Console.ReadLine();
 
-int damage = generator.Next(1, 20);
+int damage = generator.Next(1, 35);
 System.Console.WriteLine($"Fighter 1 health {fighter1Health}");
 fighter1Health -= damage;
 
