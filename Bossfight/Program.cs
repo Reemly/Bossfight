@@ -15,44 +15,48 @@ string art2 = File.ReadAllText("artworkwin.txt");
 
 while (fighter1Health > 0 && fighter2Health > 0)
 {
-    
-
-
-System.Console.WriteLine(art);
-
-Console.ReadLine();
-
-int damage = generator.Next(1, 35);
-System.Console.WriteLine($"Fighter 1 health {fighter1Health}");
-fighter1Health -= damage;
-
-damage = generator.Next(1, 20);
-fighter2Health -= damage;
-System.Console.WriteLine($"Fighter 2 health {fighter2Health}");
-Console.ReadLine();
-
-if (fighter1Health < 0)
-{
-System.Console.WriteLine("Fighter 2 wins");
-Console.ReadLine();
-System.Console.WriteLine(art1);
-
-Console.ReadLine();
 
 
 
-}
+    System.Console.WriteLine(art);
+
+    Console.ReadLine();
+
+    int damage = generator.Next(1, 20);
+    fighter1Health -= damage;
+
+    damage = generator.Next(1, 20);
+    fighter2Health -= damage;
+
+    System.Console.WriteLine($"Fighter 1 health {fighter1Health}");
+    System.Console.WriteLine($"Fighter 2 health {fighter2Health}");
+    Console.ReadLine();
 
 
-else if (fighter2Health < 0)
-{
-System.Console.WriteLine("fighter 1 wins");
-Console.ReadLine();
-System.Console.WriteLine(art2);
 
-Console.ReadLine();
+    if (fighter1Health < 0)
+    {
+        System.Console.WriteLine("Fighter 2 wins");
+        Console.ReadLine();
+        System.Console.WriteLine(art1);
 
-}
+        Console.ReadLine();
+
+
+
+    }
+
+
+    else if (fighter2Health < 0)
+    {
+        System.Console.WriteLine("fighter 1 wins");
+        Console.ReadLine();
+        System.Console.WriteLine(art2);
+
+        Console.ReadLine();
+
+    }
+
 
 }
 
